@@ -1,0 +1,13 @@
+{
+  "name": "yemeni-legal-platform",
+  "private": true,
+  "version": "0.3.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "check": "node --check public/js/app.js && node --check public/js/contract-engine.js",
+    "db:schema": "wrangler d1 execute yemeni-legal-db --file=database/schema.sql",
+    "db:seed": "wrangler d1 execute yemeni-legal-db --file=database/seed.sql"
+  }
+}
